@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+}
+
+.title {
+  font-size: 3em;
+  padding-left: 100px;
+}
+
+.sectiontitle {
+  padding-top: 1em;
+  font-size: 0.5em;
+  text-transform: uppercase;
+}
+
+.lyrics {
+  padding-left: 30px;
+  line-height: 2em;
+}
+
+.chord {
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+.chords {
+  font-size: 0.7em;
+  font-weight: bold;
+  padding-left: 30px;
+}
