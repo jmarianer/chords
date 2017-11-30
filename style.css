@@ -18,9 +18,14 @@ body {
   line-height: 2em;
 }
 
+.justlyrics {
+  padding-left: 30px;
+}
+
 .chord {
   font-size: 0.7em;
   font-weight: bold;
+  line-height: initial;
 }
 
 .chords {

@@ -1,27 +1,47 @@
+function lineBreaks(elt) {
+  elt.html(
+    elt.text()
+    .replace(/^\n/g, '')
+    .replace(/\n/g, '<br>\n')
+  );
+}
+
+function superscripts(elt) {
+  elt.html(
+    elt.text()
+    .replace(/:(.*?):/g, '<sup>$1</sup>')
+  );
+}
+
 $(() => {
-  $('.chords').each((_, l) => {
-    text = $(l).text();
-    text = text.replace(/^\n/g, '');
-    text = text.replace(/\n/g, '<br>\n');
-    $(l).html(text);
+  $('.chords').each((_, elt) => {
+    lineBreaks($(elt));
+    superscripts($(elt));
   });
 
-  $('.lyrics').each((_, l) => {
-    text = $(l).text();
-    text = text.replace(/^\n/g, '');
-    text = text.replace(/\n/g, '<br>\n');
-    text = text.replace(/{(.*?)}/g, '<span class="chord">$1</span>');
-    $(l).html(text);
+  $('.justlyrics').each((_, elt) => {
+    lineBreaks($(elt));
   });
 
-  $('.chord').each((_,c) => {
-    text = $(c).text();
-    text = text.replace(/:(.*?):/g, '<sup>$1</sup>');
-    $(c).html(text);
+  $('.lyrics').each((_, elt) => {
+    elt = $(elt);
 
-    $(c).css({position:'absolute'})
-    pos = $(c).offset();
-    pos.top -= 15;
-    $(c).offset(pos);
+    elt.html(
+      elt.text()
+      .replace(/^\n/g, '')
+      .replace(/\n/g, '<br>\n')
+      .replace(/{(.*?)}/g, '<span class="chord">$1</span>')
+    );
+  });
+
+  $('.chord').each((_, elt) => {
+    elt = $(elt);
+
+    superscripts(elt);
+
+    pos = elt.position();
+    elt.css({position:'absolute'})
+    pos.top -= elt.height();
+    elt.offset(pos);
   });
 })
