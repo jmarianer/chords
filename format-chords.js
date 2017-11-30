@@ -13,8 +13,8 @@ function superscripts(elt) {
   );
 }
 
-$(() => {
-  $('.chords').each((_, elt) => {
+$(function() {
+  $('.chords').each(function(_, elt) {
     elt = $(elt);
     elt.html(
       elt.text()
@@ -25,11 +25,11 @@ $(() => {
 
   });
 
-  $('.justlyrics').each((_, elt) => {
+  $('.justlyrics').each(function(_, elt) {
     lineBreaks($(elt));
   });
 
-  $('.lyrics').each((_, elt) => {
+  $('.lyrics').each(function(_, elt) {
     elt = $(elt);
 
     elt.html(
@@ -40,7 +40,7 @@ $(() => {
     );
   });
 
-  $('.chord').each((_, elt) => {
+  $('.chord').each(function(_, elt) {
     elt = $(elt);
 
     superscripts(elt);
