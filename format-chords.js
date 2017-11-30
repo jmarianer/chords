@@ -20,13 +20,20 @@ $(function() {
       elt.text()
       .replace(/^\n/, '')
       .replace(/\n/g, '<br>\n')
+      .replace(/,,,/g, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
       .replace(/:(.*?):/g, '<sup>$1</sup>')
     );
 
   });
 
   $('.justlyrics').each(function(_, elt) {
-    lineBreaks($(elt));
+    elt = $(elt);
+    elt.html(
+      elt.text()
+      .replace(/^\n/, '')
+      .replace(/\n/g, '<br>\n')
+      .replace(/,,,/g, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+    );
   });
 
   $('.lyrics').each(function(_, elt) {
@@ -36,6 +43,7 @@ $(function() {
       elt.text()
       .replace(/^\n/, '')
       .replace(/\n/g, '<br>\n')
+      .replace(/,,,/g, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
       .replace(/{(.*?)}/g, '<span class="chord-holder"><span class="chord">$1</span></span>')
     );
   });
