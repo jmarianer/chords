@@ -15,8 +15,14 @@ function superscripts(elt) {
 
 $(() => {
   $('.chords').each((_, elt) => {
-    lineBreaks($(elt));
-    superscripts($(elt));
+    elt = $(elt);
+    elt.html(
+      elt.text()
+      .replace(/^\n/g, '')
+      .replace(/\n/g, '<br>\n')
+      .replace(/:(.*?):/g, '<sup>$1</sup>')
+    );
+
   });
 
   $('.justlyrics').each((_, elt) => {
