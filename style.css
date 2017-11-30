@@ -5,13 +5,13 @@ body {
 
 .album {
   font-size: 1em;
-  font-variant-caps: all-small-caps;
+  font-variant: small-caps;
   padding-left: 125px;
 }
 
 .title {
   font-size: 2em;
-  font-variant-caps: small-caps;
+  font-variant: small-caps;
   padding-left: 100px;
   line-height: 1em;
 }
