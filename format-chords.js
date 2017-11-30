@@ -18,7 +18,7 @@ $(function() {
     elt = $(elt);
     elt.html(
       elt.text()
-      .replace(/^\n/g, '')
+      .replace(/^\n/, '')
       .replace(/\n/g, '<br>\n')
       .replace(/:(.*?):/g, '<sup>$1</sup>')
     );
@@ -34,20 +34,14 @@ $(function() {
 
     elt.html(
       elt.text()
-      .replace(/^\n/g, '')
+      .replace(/^\n/, '')
       .replace(/\n/g, '<br>\n')
-      .replace(/{(.*?)}/g, '<span class="chord">$1</span>')
+      .replace(/{(.*?)}/g, '<span class="chord-holder"><span class="chord">$1</span></span>')
     );
   });
 
   $('.chord').each(function(_, elt) {
     elt = $(elt);
-
     superscripts(elt);
-
-    pos = elt.position();
-    elt.css({position:'absolute'})
-    pos.top -= elt.height();
-    elt.offset(pos);
   });
 })

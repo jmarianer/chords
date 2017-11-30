@@ -26,6 +26,8 @@ body {
   font-size: 0.7em;
   font-weight: bold;
   line-height: initial;
+  position: absolute;
+  bottom: 1.5em;
 }
 
 .chords {
@@ -34,6 +36,10 @@ body {
   padding-left: 30px;
 }
 
+.chord-holder {
+  position: relative;
+}
+
 .pagebreak {
-  /*page-break-before: always;*/
+  page-break-before: always;
 }
