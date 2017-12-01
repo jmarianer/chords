@@ -38,13 +38,24 @@ $(function() {
 
   $('.lyrics').each(function(_, elt) {
     elt = $(elt);
-
     elt.html(
       elt.text()
       .replace(/^\n/, '')
       .replace(/\n/g, '<br>\n')
       .replace(/,,,/g, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
       .replace(/{(.*?)}/g, '<span class="chord-holder"><span class="chord">$1</span></span>')
+    );
+  });
+
+  $('.tabs').each(function(_, elt) {
+    elt = $(elt);
+    elt.html(
+      elt.text()
+      .replace(/^\n/, '')
+      .replace(/\n/g, '<br>\n')
+      .replace(/,/g, '&nbsp;')
+      .replace(/{(.*?)}/g, '&nbsp;<span class="tabschord">$1</span>&nbsp;')
+      .replace(/:(.*?):/g, '<sup>$1</sup>')
     );
   });
 

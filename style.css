@@ -50,6 +50,20 @@ body {
   position: relative;
 }
 
+.tabs {
+  font-size: 0.8em;
+  font-family: courier, monospace;
+  font-weight: bold;
+  padding-left: 30px;
+  line-height: 0.8em;
+  letter-spacing: -0.1em;
+}
+
+.tabschord {
+  /* font-family: sans-serif; */
+  /* letter-spacing: initial; */
+}
+
 .pagebreak {
   page-break-before: always;
 }
