@@ -81,13 +81,11 @@ body {
 
 .tabchar {
   display: block;
-  font-size: 0.8em;
   background-color: white;
   margin: -2px;
   padding: 2px;
-  border: 1px solid black;
-  width: 1em;
-  height: 1em;
+  width: .5em;
+  height: .5em;
   vertical-align: middle;
   text-align: center;
   border-radius: 100px;
