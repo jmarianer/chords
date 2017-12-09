@@ -60,11 +60,18 @@ body {
 }
 
 .tabline {
-  height: 1em;
+  height: 1.5em;
   position: relative;
-  border-top: 1px solid black;
   display: inline-block;
-  top: 0.5em;
+  border-left-style: double;
+  border-right-style: double;
+}
+
+.tabhorizline {
+  position: absolute;
+  border-top: 1px solid black;
+  top: 0.75em;
+  width: 100%;
 }
 
 .tabchordline {
@@ -76,7 +83,9 @@ body {
 
 .tabcharholder {
   position: absolute;
-  top: -0.5em;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .tabchar {
@@ -88,7 +97,6 @@ body {
   border: 1px solid black;
   width: 1em;
   height: 1em;
-  vertical-align: middle;
   text-align: center;
   border-radius: 100px;
 }

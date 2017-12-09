@@ -22,7 +22,7 @@ function tabline(s) {
       contents += '<span style="left: ' + x + 'em" class="tabcharholder"><span class="tabchar">' + c + '</span></span>';
     }
   }
-  return '<span style="width: ' + s.length + 'em" class="tabline">' + contents + '</span>&nbsp;';
+  return '<span style="width: ' + s.length + 'em" class="tabline"><span class="tabhorizline"></span>' + contents + '</span>';
 }
 
 function chordline(s) {
@@ -36,7 +36,7 @@ function chordline(s) {
     contents += '<span style="left: ' + left + 'em" class="tabchordholder"><span class="tabchord">' + chord + '</span></span>';
     left += chord.length;
   }
-  return '<span style="width: ' + s.length + 'em" class="tabchordline">' + contents + '</span>&nbsp;<br>';
+  return '<span style="width: ' + s.length + 'em" class="tabchordline">' + contents + '</span><br>';
 }
 
 $(function() {
