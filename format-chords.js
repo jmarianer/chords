@@ -40,6 +40,22 @@ function chordline(s) {
 }
 
 $(function() {
+  $('.markup').each(function(_, elt) {
+    elt = $(elt);
+    elt.html(
+      elt.text()
+      .replace(/alb\[/g, '<div class="album">')
+      .replace(/title\[/g, '<div class="title">')
+      .replace(/st\[/g, '<div class="sectiontitle">')
+      .replace(/tabs\[/g, '<div class="tabs">')
+      .replace(/jlyr\[/g, '<div class="justlyrics">')
+      .replace(/lyr\[/g, '<div class="lyrics">')
+      .replace(/ch\[/g, '<div class="chords">')
+      .replace(/pgbr\[/g, '<div class="pagebreak"></div>')
+      .replace(/\]/g, '</div>')
+    );
+  });
+  
   $('.chords').each(function(_, elt) {
     elt = $(elt);
     elt.html(
@@ -49,7 +65,6 @@ $(function() {
       .replace(/,,,/g, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
       .replace(/:(.*?):/g, '<sup>$1</sup>')
     );
-
   });
 
   $('.justlyrics').each(function(_, elt) {
