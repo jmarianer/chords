@@ -51,7 +51,7 @@ $(function() {
       .replace(/jlyr\[/g, '<div class="justlyrics">')
       .replace(/lyr\[/g, '<div class="lyrics">')
       .replace(/ch\[/g, '<div class="chords">')
-      .replace(/pgbr\[/g, '<div class="pagebreak"></div>')
+      .replace(/pgbr\[/g, '<div class="pagebreak">')
       .replace(/\]/g, '</div>')
     );
   });

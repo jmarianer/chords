@@ -3,6 +3,7 @@ body {
   font-size: 14pt;
 }
 
+/* Header */
 .album {
   font-size: 1em;
   font-variant: small-caps;
@@ -16,47 +17,50 @@ body {
   line-height: 1em;
 }
 
+
+/* Padding on everything except section titles */
+.lyrics, .justlyrics, .chords, .tabs {
+  padding-left: 40px;
+}
+
+/* Section title */
 .sectiontitle {
   padding-top: 1em;
   font-size: 0.5em;
   text-transform: uppercase;
 }
 
+/* Lyrics */
 .lyrics {
-  padding-left: 30px;
   line-height: 2em;
 }
 
 .justlyrics {
-  padding-left: 30px;
   line-height: 1.5em;
 }
 
+/* Chords */
 .chord {
   font-size: 0.8em;
   font-weight: bold;
   line-height: initial;
   position: absolute;
   bottom: 1.2em;
+  white-space: nowrap;
 }
 
 .chords {
   font-size: 0.8em;
   font-weight: bold;
-  padding-left: 30px;
 }
 
 .chord-holder {
   position: relative;
 }
 
+/* Tabs */
 .tabs {
   font-size: 0.65em;
-  padding-left: 30px;
-}
-
-.pagebreak {
-  page-break-before: always;
 }
 
 .tabline {
@@ -102,10 +106,40 @@ body {
 
 .tabchordholder {
   position: absolute;
-  bottom: 0;
+  bottom: 0.5em;
 }
 
 .tabchord {
   font-weight: bold;
   font-size: 1.2em;
+}
+
+/* Pagination */
+.pagebreak {
+  page-break-before: always;
+}
+
+.song {
+  page-break-after: always;
+}
+.song:last-child {
+  page-break-after: avoid;
+}
+
+/* Special considerations for displaying in the browser */
+@media screen {
+  .song {
+    padding-left: 40px;
+    border-bottom: 1px dotted black;
+    padding-bottom: 3em;
+    margin-bottom: 3em;
+  }
+  .song:first-child {
+    padding-top: 30px;
+  }
+  .song:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }
