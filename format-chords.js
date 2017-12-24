@@ -40,7 +40,7 @@ function chordline(s) {
 }
 
 $(function() {
-  $('.markup').each(function(_, elt) {
+  $('.song').each(function(_, elt) {
     elt = $(elt);
     elt.html(
       elt.text()
@@ -55,7 +55,7 @@ $(function() {
       .replace(/\]/g, '</div>')
     );
   });
-  
+
   $('.chords').each(function(_, elt) {
     elt = $(elt);
     elt.html(
