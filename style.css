@@ -91,7 +91,6 @@ body {
   position: absolute;
   width: 2.5em;
   height: 10px;
-  background: url(slur.svg);
   bottom: 1em;
   background-size: contain;
   background-repeat: no-repeat;

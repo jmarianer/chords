@@ -19,7 +19,7 @@ function tabline(s) {
   for (var x = 0; x < s.length; x++) {
     var c = s.charAt(x);
     if (c == 'h' || c == 'p') {
-      contents += '<span style="left: ' + (x-0.75) + 'em" class="slur" />';
+      contents += '<span style="left: ' + (x-0.75) + 'em" class="slur"><svg width="30px" height="10px" viewBox="0 0 30 10" version="1.1" xmlns="http://www.w3.org/2000/svg"><g><path d="M0,10 C0,0 30,0 30,10" stroke="#000000" fill-opacity="0"></path></g></svg></span>';
     } else if (c == '-') {
       // Horizontal lines are taken care of elsewhere.
     } else if (c == '|') {
