@@ -1,6 +1,6 @@
 function lineBreaks(elt) {
   elt.html(
-    elt.text()
+    elt.html()
     .replace(/^\n/g, '')
     .replace(/\n/g, '<br>\n')
   );
@@ -8,7 +8,7 @@ function lineBreaks(elt) {
 
 function superscripts(elt) {
   elt.html(
-    elt.text()
+    elt.html()
     .replace(/:(.*?):/g, '<sup>$1</sup>')
   );
 }
@@ -43,7 +43,7 @@ $(function() {
   $('.song').each(function(_, elt) {
     elt = $(elt);
     elt.html(
-      elt.text()
+      elt.html()
       .replace(/alb\[/g, '<div class="album">')
       .replace(/title\[/g, '<div class="title">')
       .replace(/st\[/g, '<div class="sectiontitle">')
@@ -59,7 +59,7 @@ $(function() {
   $('.chords').each(function(_, elt) {
     elt = $(elt);
     elt.html(
-      elt.text()
+      elt.html()
       .replace(/^\n/, '')
       .replace(/\n/g, '<br>\n')
       .replace(/,,,/g, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
@@ -70,7 +70,7 @@ $(function() {
   $('.justlyrics').each(function(_, elt) {
     elt = $(elt);
     elt.html(
-      elt.text()
+      elt.html()
       .replace(/^\n/, '')
       .replace(/\n/g, '<br>\n')
       .replace(/,,,/g, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
@@ -80,7 +80,7 @@ $(function() {
   $('.lyrics').each(function(_, elt) {
     elt = $(elt);
     elt.html(
-      elt.text()
+      elt.html()
       .replace(/^\n/, '')
       .replace(/\n/g, '<br>\n')
       .replace(/,,,/g, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
@@ -91,7 +91,7 @@ $(function() {
   $('.tabs').each(function(_, elt) {
     elt = $(elt);
     elt.html(
-      elt.text()
+      elt.html()
       .replace(/^\n/, '')
       .replace(/\n/g, '<br>\n')
       .replace(/,/g, '&nbsp;')
