@@ -22,6 +22,8 @@ function tabline(s) {
       contents += '<span style="left: ' + (x-0.75) + 'em" class="slur" />';
     } else if (c == '-') {
       // Horizontal lines are taken care of elsewhere.
+    } else if (c == '|') {
+      contents += '<span style="left: ' + x + 'em" class="barline"></span>';
     } else {
       contents += '<span style="left: ' + x + 'em" class="tabcharholder"><span class="tabchar">' + c + '</span></span>';
     }

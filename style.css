@@ -126,6 +126,14 @@ body {
   font-size: 1.2em;
 }
 
+.barline {
+  height: 100%;
+  width: 1px;
+  background: black;
+  display: block;
+  position: absolute;
+}
+
 /* Pagination */
 @page {
   margin: 0;
