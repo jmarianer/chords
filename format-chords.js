@@ -18,7 +18,11 @@ function tabline(s) {
   var contents = '';
   for (var x = 0; x < s.length; x++) {
     var c = s.charAt(x);
-    if (c != '-') {
+    if (c == 'h' || c == 'p') {
+      contents += '<span style="left: ' + (x-0.75) + 'em" class="slur" />';
+    } else if (c == '-') {
+      // Horizontal lines are taken care of elsewhere.
+    } else {
       contents += '<span style="left: ' + x + 'em" class="tabcharholder"><span class="tabchar">' + c + '</span></span>';
     }
   }
