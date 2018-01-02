@@ -155,6 +155,16 @@ body {
   page-break-after: avoid;
 }
 
+/* Chord diagrams */
+.fret {
+  stroke: #ccc;
+  stroke-width: 3px;
+}
+.string, .frame {
+  stroke: black;
+  fill: none;
+}
+
 /* Special considerations for displaying in the browser */
 @media screen {
   .album, .title {
